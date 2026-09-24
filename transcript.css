@@ -1,0 +1,151 @@
+:root {
+    --highlight: #f2d492;
+}
+
+.transcript-page-hero {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 55px 4% 30px;
+    width: min(1050px, 92%);
+    margin: 0 auto;
+}
+
+.transcript-page-hero img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+}
+
+.transcript-page-hero h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: var(--forest);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.transcript-page-hero p {
+    color: var(--teal);
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.transcript-wrap {
+    width: min(1050px, 92%);
+    margin: 0 auto 80px;
+    background: var(--white);
+    border: 6px double var(--forest);
+    padding: clamp(18px, 4vw, 45px);
+}
+
+.transcript-wrap h2 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    color: var(--forest);
+    font-size: 1.6rem;
+    margin: 25px 0 12px;
+    text-align: center;
+}
+
+.transcript-wrap h2:first-child {
+    margin-top: 0;
+}
+
+.transcript-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.transcript-wrap th,
+.transcript-wrap td {
+    border: 1px solid #cbbfa2;
+    padding: 8px 10px;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.transcript-wrap thead th,
+.transcript-wrap .semester-title {
+    background: var(--forest);
+    color: var(--white);
+}
+
+.transcript-wrap .semester-title {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+}
+
+.transcript-wrap .center {
+    text-align: center;
+}
+
+.transcript-wrap .total {
+    font-weight: 700;
+    background: #ece2c9;
+}
+
+/* student info table */
+.transcript-wrap .student-info td:first-child {
+    font-weight: 700;
+    width: 40%;
+}
+
+.transcript-wrap .student-name-cell {
+    background: var(--highlight);
+    font-weight: 700;
+}
+
+.transcript-wrap tbody tr:nth-child(even) td {
+    background: #faf6ec;
+}
+
+/* semester layout: semesters 1 & 2 side by side, semester 3 below */
+.semester-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.semester-three {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 700px) {
+    .semester-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .semester-three {
+        grid-column: 1;
+    }
+}
+
+.transcript-note {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--brown);
+    font-style: italic;
+}
+
+.print-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 22px;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: "Montserrat", Arial, sans-serif;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.print-btn:hover {
+    background: var(--brown);
+    transform: translateY(-3px);
+}
